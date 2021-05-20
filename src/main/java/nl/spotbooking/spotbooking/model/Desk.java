@@ -15,6 +15,13 @@ public class Desk {
     @Column
     private String Availability;
 
+    @Column
+    private String Username;
+
+    @Column
+    private String Email;
+
+
     @ManyToOne
     private Date date;
 
@@ -51,5 +58,21 @@ public class Desk {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public void setUsername(String username) {
+        Username = username;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
     }
 }

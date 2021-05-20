@@ -47,6 +47,8 @@ public class DeskServiceImpl implements DeskService {
         if (!deskRepository.existsById(id)) throw new RecordNotFoundException();
         Desk existingDesk = deskRepository.findById(id).get();
         existingDesk.setAvailability(desk.getAvailability());
+        existingDesk.setUsername(desk.getUsername());
+        existingDesk.setEmail(desk.getEmail());
         deskRepository.save(existingDesk);
     }
 

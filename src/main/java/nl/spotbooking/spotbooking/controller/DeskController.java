@@ -44,7 +44,7 @@ public class DeskController {
     @PutMapping(value = "/desk/{id}")
     public ResponseEntity<Object> updateBook(@PathVariable("id") long id, @RequestBody Desk desk) {
         deskService.updateDesk(id, desk);
-        return new ResponseEntity<>("Desk updates", HttpStatus.OK);
+        return new ResponseEntity<>("Desk updated", HttpStatus.OK);
     }
 
 }
