@@ -6,15 +6,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BaseController {
 
-    @GetMapping(value="/")
+    @GetMapping(value = "/")
     public String getDemo() {
         return "Hello World";
     }
-    @GetMapping(value="/grap")
+
+    @GetMapping(value = "/grap")
     public String getGrap() {
         return "Hoe vangt een konijn een koe";
     }
-    @GetMapping(value="/antwoord")
+
+    @GetMapping(value = "/antwoord")
     public String getAntwoord() {
         return "Wie het weet mag het zeggen";
     }

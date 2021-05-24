@@ -29,7 +29,7 @@ public class ClientsController {
         if (!this.data.keySet().contains(id)) {
             throw new RecordNotFoundException();
         }
-        return new ResponseEntity<Object>(this.data.get(id),HttpStatus.OK);
+        return new ResponseEntity<Object>(this.data.get(id), HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/clients/{id}")
@@ -37,8 +37,8 @@ public class ClientsController {
         if (!this.data.keySet().contains(id)) {
             throw new RecordNotFoundException();
         }
-            this.data.remove(id);
-            return new ResponseEntity<Object>("Record deleted", HttpStatus.OK);
+        this.data.remove(id);
+        return new ResponseEntity<Object>("Record deleted", HttpStatus.OK);
 
     }
 

@@ -2,6 +2,7 @@ package nl.spotbooking.spotbooking.service;
 
 import nl.spotbooking.spotbooking.exception.RecordNotFoundException;
 import nl.spotbooking.spotbooking.model.Desk;
+import nl.spotbooking.spotbooking.model.User;
 import nl.spotbooking.spotbooking.repository.DeskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,14 +20,16 @@ public class DeskServiceImpl implements DeskService {
         return deskRepository.findAll();
     }
 
+
     @Override
     public Desk getDesk(long id) {
         if (deskRepository.existsById(id)) {
             return deskRepository.findById(id).orElse(null);
         } else {
-            throw new RecordNotFoundException("No desk found with this id"  + id);
+            throw new RecordNotFoundException("No desk found with this id" + id);
         }
     }
+
 
     @Override
     public void save(Desk desk) {
@@ -38,9 +41,10 @@ public class DeskServiceImpl implements DeskService {
         if (deskRepository.existsById(id)) {
             deskRepository.deleteById(id);
         } else {
-            throw new RecordNotFoundException("No desk found with this id"  + id);
+            throw new RecordNotFoundException("No desk found with this id" + id);
         }
     }
+
 
     @Override
     public void updateDesk(long id, Desk desk) {
@@ -51,7 +55,6 @@ public class DeskServiceImpl implements DeskService {
         existingDesk.setEmail(desk.getEmail());
         deskRepository.save(existingDesk);
     }
-
 
 
 }

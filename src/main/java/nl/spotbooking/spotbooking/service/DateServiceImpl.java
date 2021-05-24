@@ -24,7 +24,7 @@ public class DateServiceImpl implements DateService {
         if (dateRepository.existsById(id)) {
             return dateRepository.findById(id).orElse(null);
         } else {
-            throw new RecordNotFoundException("No date found with this id"  + id);
+            throw new RecordNotFoundException("No date found with this id" + id);
         }
     }
 
@@ -38,7 +38,7 @@ public class DateServiceImpl implements DateService {
         if (dateRepository.existsById(id)) {
             dateRepository.deleteById(id);
         } else {
-            throw new RecordNotFoundException("No date found with this id"  + id);
+            throw new RecordNotFoundException("No date found with this id" + id);
         }
     }
 

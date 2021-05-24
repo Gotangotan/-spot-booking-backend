@@ -10,17 +10,14 @@ public class Date {
 
     // attributen die overeenkomen met de columns in PostgreSQL/SpotBooking/Table/Columns
 
+    @OneToMany(mappedBy = "date")
+    List<Desk> dates;
     //PrimaryKey
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column
     private String Date;
-
-    @OneToMany (mappedBy = "date")
-    List<Desk> dates;
-
 
 
     //getters and setters

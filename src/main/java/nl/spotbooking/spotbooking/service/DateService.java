@@ -7,8 +7,11 @@ import java.util.List;
 
 public interface DateService {
 
-     List<Date> getAllDates();
-     Date getDate(long id);
-     void save(Date date);
-     void deleteById(long id);
+    List<Date> getAllDates();
+
+    Date getDate(long id);
+
+    void save(Date date);
+
+    void deleteById(long id);
 }

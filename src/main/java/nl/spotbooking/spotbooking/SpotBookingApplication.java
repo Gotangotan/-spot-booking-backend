@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 public class SpotBookingApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpotBookingApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpotBookingApplication.class, args);
+    }
 
 }

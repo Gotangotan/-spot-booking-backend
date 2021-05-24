@@ -31,15 +31,14 @@ public class BooksController {
         if (!this.data.keySet().contains(id)) {
             throw new RecordNotFoundException();
         }
-        return new ResponseEntity<Object>(this.data.get(id),HttpStatus.OK);
+        return new ResponseEntity<Object>(this.data.get(id), HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/books/{id}")
     public ResponseEntity<Object> deleteBook(@PathVariable("id") Long id) {
         if (!this.data.keySet().contains(id)) {
             throw new RecordNotFoundException();
-        }
-        else    {
+        } else {
             return new ResponseEntity<Object>("Record not found", HttpStatus.NOT_FOUND);
         }
     }

@@ -14,7 +14,7 @@ public class ExceptionController {
     @ExceptionHandler(value = RecordNotFoundException.class)
     public ResponseEntity<Object> exception(RecordNotFoundException exception) {
         String message = exception.getMessage();
-        return new ResponseEntity<>(message, HttpStatus.NOT_FOUND );
+        return new ResponseEntity<>(message, HttpStatus.NOT_FOUND);
     }
 
 
