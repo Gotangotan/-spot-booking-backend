@@ -291,8 +291,8 @@ values ('Desk5', 'Available', 22);
 
 
 INSERT INTO users (username, password, email)
-VALUES ('User', 'password', 'User@email.nl');
+VALUES ('user', 'password', 'User@email.nl');
 INSERT INTO users (username, password, email)
-VALUES ('Admin', 'password', 'Admin@email.nl');
+VALUES ('admin', 'password', 'Admin@email.nl');
 INSERT INTO users (username, password, email)
-VALUES ('Testuser', 'password', 'Testuser@email.nl');
+VALUES ('testuser', 'password', 'Testuser@email.nl');
